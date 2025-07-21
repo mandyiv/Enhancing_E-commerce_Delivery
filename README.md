@@ -1,44 +1,47 @@
 # Enhancing E-commerce Delivery Efficiency through Advanced Analytics and Machine Learning
 
 ## Project Overview  
-This project addresses the critical challenge of **delivery delays** in the fast-paced e-commerce logistics space. Using a rich dataset of 10,999 historical deliveries, we aimed to identify and prevent delays, improve warehouse batching and packaging logic, and develop a robust routing framework to improve **SLA adherence** and **customer satisfaction**.
+This project addresses the critical challenge of delivery delays in the competitive e-commerce logistics landscape. Leveraging a comprehensive dataset of historical deliveries, this initiative aims to identify and prevent delays, optimise internal warehouse operations (packaging and batching), and establish a robust routing framework to improve Service Level Agreement (SLA) adherence and customer satisfaction.
 
 ---
 
 ## Goal  
-- Predict and prevent delivery delays  
-- Optimise packaging and batching processes  
-- Design a courier assignment framework based on operational performance  
+To identify and prevent delivery delays, optimise packaging and batching logic, and build a routing framework that improves SLA adherence and customer satisfaction.
 
 ---
 
 ## Solution Approach
+A multi-faceted approach was adopted, comprising four key analytical pillars:
 
-1. **Exploratory Data Analysis (EDA)**  
-   - Uncovered key patterns, bottlenecks, and data quality issues
+1. **Exploratory Data Analysis (EDA):** Uncovering operational bottlenecks and key data patterns.
 
-2. **Order Clustering**  
-   - Segmented deliveries into operational clusters for optimised batching and packaging
+2. **Order Clustering:** Optimising packaging and batching logic by grouping orders with similar operational characteristics.
 
-3. **Predictive Modeling**  
-   - Built a machine learning model (CatBoost) with **95% recall** to flag potential delays
+3. **Predictive Modelling:** Developing a machine learning model to score future deliveries by their risk of delay, enabling proactive intervention.
 
-4. **Routing Logic & Courier Rules**  
-   - Developed dynamic rules for last-mile delivery optimisation based on weight and product importance
+4. **Routing Logic & Courier Rules:** Deriving actionable rules to optimise last-mile delivery performance based on product attributes and courier capabilities.
 
 ---
 
 ## Key Insights
 
-- **40.3% of deliveries** experienced delays — a major performance gap  
-- **Medium-weight items (2001–4000g)** had **99.9% on-time rate** → operational sweet spot  
-- **Heavy items** had the **highest delay rate (56.8%)**, regardless of courier  
-- **Orders with >10% discounts** had **100% on-time delivery**, showing promo-driven prioritization  
-- **Courier_1** consistently underperformed for **high-priority and heavy shipments**  
-- **Courier_4 & 5** demonstrated superior, consistent performance  
-- **Customer care calls** were early indicators of delivery risk  
-- Operational clustering revealed 3 order types ideal for tailored batching workflows  
-- **Top delay predictors:** `Discount_offered`, `Weight_in_gms`
+- **Significant Delay Rate:** Approximately 40.3% of deliveries experienced delays, highlighting a substantial challenge.
+
+- **Weight as a Critical Factor:** 'Medium' weight items show near-perfect on-time delivery (99.9%), while 'Heavy' items consistently exhibit the worst performance (56.8% delay rate) across all couriers, indicating a systemic operational challenge.
+
+- **Discount-Driven Prioritisation:** Orders with discounts over 10% achieve a striking 100% on-time delivery rate, suggesting a strong, likely intentional, operational prioritisation for promotional campaigns.
+
+- **Suboptimal Courier & Mode Matching:**
+
+      - High-priority items are not consistently routed via faster modes; surprisingly, 'Road' and 'Ship' modes often outperform 'Flight' for these.
+      
+      - `Courier_1` consistently underperforms, especially for high-priority and heavy items. `Courier_4` and `Courier_5` show superior performance for high-importance items.
+
+- **Customer Care Calls as Early Warning:** An increase in customer care calls strongly correlates with a decrease in on-time delivery rates.
+
+- **Operational Clusters:** Orders naturally group into three distinct clusters based on weight, discount, cost, and importance, enabling tailored batching and packaging strategies.
+
+- **Predictive Power:** A CatBoost model achieved a high recall of 0.95 for identifying late deliveries, demonstrating strong potential for proactive delay mitigation. `Discount_offered` and `Weight_in_gms` were the most influential features in predicting delays.
 
 ---
 
