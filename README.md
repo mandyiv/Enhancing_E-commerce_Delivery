@@ -5,11 +5,6 @@ This project addresses the critical challenge of **delivery delays** in the fast
 
 ---
 
-## Project Description  
-We enhanced delivery efficiency through data-driven insights and machine learning. By clustering operationally similar orders and developing a high-recall CatBoost model, we proactively flagged at-risk deliveries and optimised courier routing.
-
----
-
 ## Goal  
 - Predict and prevent delivery delays  
 - Optimise packaging and batching processes  
@@ -59,11 +54,8 @@ We enhanced delivery efficiency through data-driven insights and machine learnin
 
 ## Technologies Used
 
-- Python  
-- Pandas, NumPy  
-- Scikit-learn  
-- CatBoost, XGBoost, LightGBM, ExtraTrees, RandomForest, Logistic Regression  
-- Matplotlib, Seaborn  
+- Python (Pandas, Matplotlib, Seaborn, Scikit-learn) 
+- Machine Learning (CatBoost, XGBoost, LightGBM, ExtraTrees, RandomForest, Logistic Regression)
 - Jupyter Notebook  
 
 ---
